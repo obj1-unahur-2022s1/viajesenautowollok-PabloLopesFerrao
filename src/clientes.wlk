@@ -7,7 +7,7 @@ object ludmila {
 
 object anaMaria {
 	var kilometroPrecio = 25
-	var estaEstable = true
+	var estaEstable = false
 	
 	method estaEstable(estaBien){
 		if (estaEstable == estaBien){

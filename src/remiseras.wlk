@@ -5,6 +5,7 @@ object roxana{
 	
 	method precioViaje(cliente, kilometrosTotal){
 		precioViaje += cliente.kilometroPrecio() *  kilometrosTotal
+		return precioViaje
 	}
 }
 
@@ -13,6 +14,7 @@ object gabriela{
 	
 	method precioViaje(cliente, kilometrosTotal){
 		precioViaje +=  cliente.kilometroPrecio() *1.2 * kilometrosTotal
+		return precioViaje
 	}
 	
 }
@@ -22,6 +24,13 @@ object mariela{
 	
 	method precioViaje(cliente, kilometrosTotal){
 		precioViaje +=  cliente.kilometroPrecio() * kilometrosTotal
+		if (precioViaje <=50){
+			precioViaje = 50
+			return precioViaje
+		} else{
+			return precioViaje
+		}
+		
 	}
 }
 
@@ -31,8 +40,10 @@ object juana{
 	method precioViaje(cliente, kilometrosTotal){
 		if (kilometrosTotal <= 8){
 			 precioViaje = 100
+			 return precioViaje
 		}else{
 			precioViaje = 200
+			return precioViaje
 		}
 	}
 }
@@ -41,9 +52,13 @@ object juana{
 
 object lucia{
 	var precioViaje = 0
+	var reemplazaA
 	
-	method precioViaje(remisero){
-		precioViaje += remisero.precioViaje()
+	method reemplazaA(remisero) = reemplazaA 
+	
+	method precioViaje(cliente, kilometrosTotal){
+		precioViaje += reemplazaA.precioViaje(cliente, kilometrosTotal)
+		return precioViaje
 	
 	}
 }

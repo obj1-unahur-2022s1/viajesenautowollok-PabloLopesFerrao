@@ -25,7 +25,7 @@ object oficina {
 	}
 	
 	method remiseraElegidaParaViaje(cliente, kms){
-		if ((remiseraPrimerOpcion.precioViaje() - remiseraSegundaOpcion.precioViaje()) > 30){ 
+		if ((remiseraPrimerOpcion.precioViaje(cliente, kms) - remiseraSegundaOpcion.precioViaje(cliente, kms)) > 30){ 
 			return remiseraSegundaOpcion
 		}else{
 			return remiseraPrimerOpcion
