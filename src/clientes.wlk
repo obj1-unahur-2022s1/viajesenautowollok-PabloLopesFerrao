@@ -37,7 +37,6 @@ object melina{
 		trabajandoPara = cliente
 	}
 	
-	method kilometroPrecio(cliente){
-		kilometroPrecio +=  cliente.kilometroPrecio() -3
-	}
+	method kilometroPrecio() = kilometroPrecio -3
+	
 }

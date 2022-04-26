@@ -54,7 +54,9 @@ object lucia{
 	var precioViaje = 0
 	var reemplazaA
 	
-	method reemplazaA(remisero) = reemplazaA 
+	method reemplazaA(remisero){
+		reemplazaA = remisero
+	}  
 	
 	method precioViaje(cliente, kilometrosTotal){
 		precioViaje += reemplazaA.precioViaje(cliente, kilometrosTotal)
