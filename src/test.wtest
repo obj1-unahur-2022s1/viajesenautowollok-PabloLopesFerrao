@@ -1,3 +1,8 @@
+/*
+ * Hay test que dan mal 
+ * Ej: assert.equals(43, gabriela.precioViaje(ludmila, 2))
+ */
+
 import oficina.*
 import remiseras.*
 import clientes.*

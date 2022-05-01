@@ -1,49 +1,43 @@
+/*
+ * Clientes: Regular -> Revisa todos los comentarios de los métodos
+ */
 import clientes.*
 
 object roxana{
-	var precioViaje = 0
+	/*Esta demas el atributo precioViaje */
+	
 	
 	method precioViaje(cliente, kilometrosTotal){
-		precioViaje += cliente.kilometroPrecio() *  kilometrosTotal
-		return precioViaje
+		return cliente.kilometroPrecio() *  kilometrosTotal
 	}
 }
 
 object gabriela{
-	var precioViaje = 0
+	/*Esta demas el atributo precioViaje */
 	
 	method precioViaje(cliente, kilometrosTotal){
-		precioViaje +=  cliente.kilometroPrecio() *1.2 * kilometrosTotal
-		return precioViaje
+		return   cliente.kilometroPrecio() *1.2 * kilometrosTotal
 	}
 	
 }
 
 object mariela{
-	var precioViaje = 0
-	
+	/*Esta demas el atributo precioViaje */
+	/*Aca debias usar el max() */
 	method precioViaje(cliente, kilometrosTotal){
-		precioViaje +=  cliente.kilometroPrecio() * kilometrosTotal
-		if (precioViaje <=50){
-			precioViaje = 50
-			return precioViaje
-		} else{
-			return precioViaje
-		}
-		
+		return 50.max(cliente.kilometroPrecio() * kilometrosTotal)		
 	}
 }
 
 object juana{
-	var precioViaje = 0
+	/*Esta demas el atributo precioViaje */
+	
 	
 	method precioViaje(cliente, kilometrosTotal){
 		if (kilometrosTotal <= 8){
-			 precioViaje = 100
-			 return precioViaje
+			 return 100
 		}else{
-			precioViaje = 200
-			return precioViaje
+			return 200
 		}
 	}
 }
@@ -51,7 +45,7 @@ object juana{
 
 
 object lucia{
-	var precioViaje = 0
+	/*Esta demas el atributo precioViaje */
 	var reemplazaA
 	
 	method reemplazaA(remisero){
@@ -59,9 +53,7 @@ object lucia{
 	}  
 	
 	method precioViaje(cliente, kilometrosTotal){
-		precioViaje += reemplazaA.precioViaje(cliente, kilometrosTotal)
-		return precioViaje
-	
+		return reemplazaA.precioViaje(cliente, kilometrosTotal)
 	}
 }
 
